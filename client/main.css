@@ -1,0 +1,292 @@
+.player1_panel .panel-hp {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+
+.player2_panel .panel-hp {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+}
+
+.timer {
+    color: green;
+    font-size: 64px;
+    position: fixed;
+    top: 50px;
+    right: 50%;
+    left: 50%;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+* {
+    cursor: default;
+    transition: 0.5s;
+    color: inherit;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gamePanel {
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+
+.pressStart:hover,
+.menuPress:hover,
+.optionsPress:hover,
+.choicePress1:hover,
+.choicePress2:hover {
+    transition: none;
+    border: 4px solid green;
+}
+
+.gamePanel .startPage .pressStart {
+    position: absolute;
+    left: 37%;
+    bottom: 7%;
+    width: 24%;
+    height: 40px;
+}
+
+.gamePanel .menuPage .menuPress {
+    width: 30%;
+    height: 35px;
+    position: absolute;
+    left: 49.5%;
+    top: 44%;
+    transform: translate(-50%, -50%);
+}
+.gamePanel .menuPage .optionsPress {
+    width: 30%;
+    height: 35px;
+    position: absolute;
+    left: 49.5%;
+    top: 51%;
+    transform: translate(-50%, -50%);
+}
+
+.gamePanel #choice .choicePress1 {
+    position: absolute;
+    width: 90px;
+    height: 110px;
+    left: 67.5%;
+    top: 33%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: red;
+    font-size: 32px
+}
+
+.gamePanel #choice .choicePress2 {
+    position: absolute;
+    width: 90px;
+    height: 110px;
+    left: 67.5%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: red;
+    font-size: 32px
+}
+
+.gamePanel .startPage {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 700px;
+    height: 450px;
+    background-size: cover;
+    background-image: url("img/title1.png");
+}
+
+.gamePanel .menuPage {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 580px;
+    height: 450px;
+    background-size: cover;
+    background-image: url("img/game.png");
+}
+
+.gamePanel .menuPage .leftScroll {
+    width: 96px;
+    height: 450px;
+    background-size: cover;
+    background-image: url("img/menucord.png");
+    animation: scroll linear 50s infinite;
+}
+
+.gamePanel .menuPage .rightScroll {
+    position: fixed;
+    right: 3px;
+    top: 0;
+    width: 97px;
+    height: 450px;
+    background-size: cover;
+    background-image: url("img/menucord.png");
+    animation: rescroll linear 50s infinite;
+}
+
+.gamePanel #choice {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 550px;
+    height: 355px;
+    background-size: cover;
+    background-image: url("img/choice.png");
+}
+
+.gamePanel .predGamePage {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 550px;
+    height: 355px;
+    background-size: cover;
+    background-image: url("img/predGame.png");
+}
+
+.firstPlayer {
+    position: absolute;
+    left: 36.7%;
+    top: 39%;
+    transform: translate(-50%, -50%);
+    width: 85px;
+    height: 105px;
+    background-size: cover;
+}
+
+.secondPlayer {
+    position: absolute;
+    left: 64%;
+    top: 39%;
+    transform: translate(-50%, -50%);
+    width: 85px;
+    height: 105px;
+    background-size: cover;
+}
+
+.gamePanel #gamePage {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    height: 670px;
+    width: 1200px;
+    background-image: url("img/bg.jpg");
+    overflow: hidden;
+    background-size: cover;
+}
+
+.panel-hp {
+    position: relative;
+    box-sizing: border-box;
+    width: 350px;
+    height: 25px;
+    background-size: cover;
+    background-image: url("img/healthBar.png");
+}
+
+.player2_panel .score-value {
+    position: absolute;
+    left: 0;
+    height: 21px;
+    margin: 2px;
+    background-color: rgb(53, 165, 19);
+}
+
+.player1_panel .score-value {
+    position: absolute;
+    right: 0;
+    height: 21px;
+    margin: 2px;
+    background-color: rgb(53, 165, 19);
+}
+
+.player1_panel .score-value .playerName {
+    position: fixed;
+    left: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 350px;
+    height: 25px;
+}
+
+.player2_panel .score-value .playerName {
+    position: fixed;
+    right: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 350px;
+    height: 25px;
+}
+
+.win {
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@keyframes scroll {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 0 845px;
+    }
+}
+
+@keyframes rescroll {
+    from {
+        background-position: 0 845px;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
